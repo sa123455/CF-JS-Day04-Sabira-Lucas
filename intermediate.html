@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate1</title>
+</head>
+
+<body>
+    <input type="number" id="nights">
+    <div id="result"></div>
+    <input id="sub_btn" type="submit" value="submit">
+    <script>
+        /* class Person { // ①
+                           firstName = ""; // ②
+                           lastName = ""; // ②    
+                        constructor(firstName, lastName) { // ③
+                               this.firstName = firstName;
+                               this.lastName = lastName;
+                           }
+                           name() { // ④
+                               return 'My name is ' + this.firstName + ' ' +this.lastName;
+                           }
+                           whoAreYou() { // ④
+                               return 'Hi , ' + this.name(); // ⑤
+                           }
+                        } */
+
+
+        class Hotel {
+            name;
+            numOfNights = Math.floor(Math.random() * 11);
+            address;
+            image;
+
+            constructor(a, b, c) {
+                this.name = a;
+                this.address = b;
+                this.image = c;
+
+            }
+            showAvailability() {
+                var numbetOfNights = document.getElementById("nights").value;
+
+                if (this.numOfNights > numbetOfNights) {
+                    document.getElementById("result").innerHTML = this.numOfNights + "You can reserve!";
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry there are no rooms available!";
+                }
+
+
+            }
+
+
+
+
+            /* console.log(`You are about to book the Hotel ${this.name},
+        for ${this.numOfNights} Nights, at the address ${this.address} with the image ${this.image}`);
+    } */
+        }
+        var hotel1 = new Hotel("Hilton", "text text", "img.jpg");
+
+        function result() {
+            hotel1.showAvailability();
+
+        }
+        document.getElementById("sub_btn").addEventListener("click", result);
+    </script>
+</body>
+
+</html>

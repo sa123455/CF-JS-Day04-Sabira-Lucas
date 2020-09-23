@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic exercise2</title>
+</head>
+
+<body>
+    <select id="select">
+        <option id="it" value="it">IT</option>
+        <option id="hospitality" value="hospitality">Hospitality</option>
+    </select>
+    <input type="submit" id="submit_btn">
+    <div id="result"></div>
+
+    <script>
+        var sub_btn = document.getElementById("submit_btn");
+        sub_btn.addEventListener('click',
+            showProfession, false);
+
+        function showProfession() {
+            var select = document.getElementById("select").value;
+            var it = document.getElementById("it").value;
+            var hospitalyty = document.getElementById("hospitality").value;
+            document.getElementById("submit").addEventListener("click", showProfession, false);
+
+            if (document.getElementById("it").value == document.getElementById("it1")) {
+                document.getElementById("it1").style.backgroundColor = "green";
+            } else if (document.getElementById("result") == hospitality) {
+                document.getElementById("hospitality1").style.backgroundColor = "red";
+            }
+
+        };
+    </script>
+</body>
+
+</html>
